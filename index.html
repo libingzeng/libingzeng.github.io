@@ -39,7 +39,7 @@
                     <p> I am now working on light transport simulation problems under the supervision of Dr. <a href="http://www.liyiwei.org/">Li-Yi Wei</a>. Prior to that, I spent one year and a half on self learning in computer graphics. I got my B.S. in electronic information engineering from <a href="http://www.hnu.edu.cn/">Hunan University (HNU)</a>.
                     </p>
                     
-                    <p> I’m interested in all topics about physically based rendering. My current research mainly focus on <em>light transport simulation</em>, especially MLT-type rendering algorithms.
+                    <p> I’m interested in all topics about physically based rendering, especially <em>light transport simulation</em> and  <em>appearance modeling</em>.
                     </p>
                     
                     Here is my <a href="index/cv_libingzeng.pdf">CV</a>&nbsp;
@@ -69,11 +69,11 @@
                 <li class="item_format" style="position:relative">
                     <img src="./research/pfmlt.jpg" class="img_format">
                         <div class="title_format">
-                            <b>A Remedy For Proposal Failures in Metropolis Light Transport</b>
+                            <b>A Remedy For Proposal Failures In Metropolis Light Transport</b>
                             <span class="author_format">Advised by Dr. <a href="http://www.liyiwei.org/">Li-Yi Wei</a>.</span>
-                            <span class="venue_format"><em>Preprint</em></span>
+                            <span class="venue_format"><em>Submitted to SIGGRAPH 2019</em></span>
                             <div class="link_format">
-                                [<a class="btn btn-default abstract" abstract="We propose a novel algorithm which provides special remedy for proposal failures to decrease the percentage of the paths used to reconstruct the final image that carries zero radiance. Firstly, our algorithm eliminates the impact of the current proposal failure on both the contribution of the current pixel and subsequent proposal paths, and then traces several extra proposal paths trying to find a nonzero contribution path.">Abstract</a>]
+                                [<a class="btn btn-default abstract" abstract="We propose a novel algorithm which provides special remedy for proposal failures to decrease the percentage of the paths used to reconstruct the final image that carries zero radiance. Our algorithm first eliminates the impact of the current proposal failure on both the contribution of the current pixel and subsequent proposal paths, and then traces several extra proposal paths trying to find a nonzero contribution path. Though some overhead must be paid for the extra mutation paths, our method substantially decreases the percentage of zero contribution paths that are used to calculate the final picture. Generally, MLT-type rendering algorithms extended with our method will be much more efficient than the original algorithms. Furthermore, the extensions are easy to implement.">Abstract</a>]
                                 [<a href="./research/pfmlt.pdf">Paper</a>]
                                 [<a href="https://github.com/libingzeng/pbrt-v3">Code_pbrt</a>]
                                 [<a href="https://github.com/libingzeng/tungsten">Code_tungsten</a>]
