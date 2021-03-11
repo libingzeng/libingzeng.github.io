@@ -40,23 +40,25 @@
                     <p> Howdy!
                     </p>
                     
-                    <p> He is a second-year Ph.D. student, supervised by Dr. <a href="http://faculty.cs.tamu.edu/nimak/">Nima Kalantari</a>, in <a href="https://engineering.tamu.edu/cse/index.html">Computer Science and Engineering</a> department at <a href="https://www.tamu.edu/">Texas A&M University</a>. His current research is to solve view synthesis problems using deep learning. Prior to this, he has worked on video denoising using deep neural networks and a resulting paper should be coming soon.
+                    <p> He is a second-year Ph.D. student, supervised by Dr. <a href="http://faculty.cs.tamu.edu/nimak/">Nima Kalantari</a>, in <a href="https://engineering.tamu.edu/cse/index.html">Computer Science and Engineering</a> department at <a href="https://www.tamu.edu/">Texas A&M University</a>. His current study topics are related to computational photography and deep learning. 
 
                  </p>
                     
-                 <p> Previously, he worked on light transport simulation problems under the supervision of Dr. <a href="http://www.liyiwei.org/">Li-Yi Wei</a>. Prior to that, he spent one year and a half on self-study in computer graphics.
+                 <p> Previously, he worked on light transport simulation problems under the supervision of Dr. <a href="http://www.liyiwei.org/">Li-Yi Wei</a>.
                  </p>
                     
                   <p> He got his bachelor degree in electronic information engineering from <a href="http://www-en.hnu.edu.cn/">Hunan University</a> where he worked with Dr. <a href="http://eeit.hnu.edu.cn/info/1411/4632.htm">Shaoyuan Wang</a>.
                   </p>
 
-                    Here is his <a href="index/cv_libingzeng.pdf">CV</a>&nbsp;
-                    <A href="mailto:libingzeng@tamu.edu"><img src="index/gmail_logo.png" width="25px"></A>&nbsp;
+                  <!-- Here is his <a href="index/cv_libingzeng.pdf">CV</a>&nbsp; -->
+                  Here is his &nbsp;
+                    <a href="mailto:libingzeng@tamu.edu"><img src="index/gmail_logo.png" width="25px"></a>&nbsp;
                     <a href="https://github.com/libingzeng" target="blank"><img src="index/github_logo.png" width="25px"></a>&nbsp;
                     <a href="https://blog.csdn.net/libing_zeng" target="blank"><img src="index/csdn_logo.png" width="25px"></a>&nbsp;
                 </div>
-                </div>
+        </div>
         
+        <!--
         <div>
             <span class="category">NEWS</span>
             <hr class="line">
@@ -79,7 +81,6 @@
                     <li>
                         <font color="black"><b>[08/2019] He starts his Ph.D. study in TAMU.</b></font>
                     </li>
-                    <!--
                     <li>
                         <font color="black"><span>[03/2019] He gets a Ph.D. offer in computer graphics from UCSB.</span></font>
                     </li>
@@ -89,25 +90,41 @@
                     <li>
                         <font color="black"><span>[12/2018] He is looking for Ph.D. position in computer graphics in the United States.</span></font>
                     </li>
-                    -->
                 </ul>
 
             </div>
         </div>
+        -->
 
         <div>
-            <span class="category">PROJECTS（Prior to Ph.D.）</span>
+            <span class="category">PAPERS</span>
             <hr class="line">
             <ol style="padding:0px;list-style-type:none">
                 
                 <li class="item_format" style="position:relative">
+                    <img src="./research/iccp2021_denoising.png" class="img_format">
+                        <div class="title_format">
+                            <b>Multi-Stage Raw Video Denoising with Adversarial Loss and Gradient Mask</b>
+                            <span class="author_format"><a href="http://people.tamu.edu/~avinashpaliwal/">Avinash Paliwal</a>, <b>Libing Zeng</b>, <a href="https://people.engr.tamu.edu/nimak/index.html">Nima Khademi Kalantari</a>.</span>
+                            <span class="venue_format"><em>ICCP 2021</em></span>
+                            <div class="link_format">
+                                [<a class="btn btn-default abstract" abstract="In this paper, we propose a learning-based approach for denoising raw videos captured under low lighting conditions. We propose to do this by first explicitly aligning the neighboring frames to the current frame using a convolutional neural network (CNN). We then fuse the registered frames using another CNN to obtain the final denoised frame. To avoid directly aligning the temporally distant frames, we perform the two processes of alignment and fusion in multiple stages. ">Abstract</a>]
+                                [<a href="https://people.engr.tamu.edu/nimak/Papers/ICCP2021_denoising/index.html">Project</a>]
+                                [<a href="https://arxiv.org/abs/2103.02861">Paper</a>]
+                                [<a href="https://github.com/avinashpaliwal/MaskDnGAN">Code</a>]
+                            </div>
+                        </div>
+                        <div style="clear:both;"></div>
+                        </li>
+                 
+                <li class="item_format" style="position:relative">
                     <img src="./research/pfmlt.jpg" class="img_format">
                         <div class="title_format">
                             <b>Rectifying Proposal Failures in Metropolis Light Transport</b>
-                            <span class="author_format">Advised by Dr. <a href="http://www.liyiwei.org/">Li-Yi Wei</a>.</span>
+                            <span class="author_format"><b>Libing Zeng</b>, <a href="http://www.liyiwei.org/">Li-Yi Wei</a>.</span>
                             <span class="venue_format"><em>Preprint (HAL)</em></span>
                             <div class="link_format">
-                                [<a class="btn btn-default abstract" abstract="Based on MMLT, we propose a novel algorithm, Proposal Failure MLT (PFMLT), which distinguishes proposal failure paths from normal proposed paths and excludes them from the states of Markov chain. ">Abstract</a>]
+                                [<a class="btn btn-default abstract" abstract="Based on MMLT, we propose a novel algorithm, Rectifying Proposal Failure MLT (RPFMLT), which distinguishes proposal failure paths from normal proposed paths and excludes them from the states of Markov chain. ">Abstract</a>]
                                 [<a href="https://hal.archives-ouvertes.fr/hal-02548744">Paper</a>]
                                 [<a href="https://github.com/libingzeng/pbrt-v3">Code_pbrt</a>]
                                 [<a href="https://github.com/libingzeng/tungsten">Code_tungsten</a>]
@@ -115,12 +132,20 @@
                         </div>
                         <div style="clear:both;"></div>
                         </li>
+
+            </ol>
+        </div>
+
+        <div>
+            <span class="category">PROJECTS</span>
+            <hr class="line">
+            <ol style="padding:0px;list-style-type:none">
                 
                 <li class="item_format" style="position:relative">
                     <img src="./research/bart_robot1.jpg" class="img_format">
                         <div class="title_format">
                             <b>A Renderer Written from the Scratch (BART Animations with High-Frequency Textures)</b>
-                            <span class="author_format">Advised by Dr. <a href="http://www.liyiwei.org/">Li-Yi Wei</a>.</span>
+                            <span class="author_format">Advised by <a href="http://www.liyiwei.org/">Dr. Li-Yi Wei</a>.</span>
                             <span class="venue_format"><em>Exercises</em></span>
                             <div class="link_format">
                                 [<a class="btn btn-default abstract" abstract="This renderer mainly has two components. First, parsing animation description files (AFF) without using flex and bison; Second, rendering the three animations of BART with much less artifacts than the original ones. Some key implementations for reducing artifacts: Multi-Jittered sampler, Gaussian filter for reconstruction, Mipmap and EWA filter for texture anti-aliasing. ">Abstract</a>]
@@ -165,7 +190,7 @@
         </div>
         
         
-        <div>
+        <!-- <div>
             <span class="category">OPEN SOURCE</span>
             <hr class="line">
             <ul class="item_content">
@@ -242,10 +267,10 @@
                     <span class="author_format">He developed the software on embedded system with C language. The software controlled a car model to run very fast along a chanllenging path. </span>
                 </li>
             </ul>
-        </div>
+        </div> -->
         
         
-        <div>
+        <!-- <div>
             <span class="category">COMPUTER SKILLS</span>
             <hr class="line">
             <ul class="item_content">
@@ -254,7 +279,7 @@
                     <span class="author_format">Python, C++, C</span>
                 </li>
             </ul>
-        </div>
+        </div> -->
         
         <div>
             <a href="https://clustrmaps.com/site/1ax9f"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=2VYrG4d0yS6ggLr46bOONoSDAi04lXmW64rQVnzoZlE&cl=ffffff" /></a>
