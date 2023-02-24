@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://people.engr.tamu.edu/nimak/Papers/SIGAsia2022_LookAhead/index.html -->
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Test-Time Optimization for Video Depth Estimation Using Pseudo Reference Depth</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <link rel="icon" type="image/jpg" href="depth/depth_icon.jpg">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="./depth/bootstrap.min.css">
+    <link rel="stylesheet" href="./depth/font-awesome.min.css">
+    <link rel="stylesheet" href="./depth/codemirror.min.css">
+    <link rel="stylesheet" href="./depth/app.css">
+
+    <link rel="stylesheet" href="./depth/bootstrap.min(1).css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="./depth/analytics.js"></script><script async="" src="./depth/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110862391-3');
+    </script>
+
+    <script src="./depth/jquery.min.js"></script>
+    <script src="./depth/bootstrap.min.js"></script>
+    <script src="./depth/codemirror.min.js"></script>
+    <script src="./depth/clipboard.min.js"></script>
+    
+    <script src="./depth/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                Test-Time Optimization for Video Depth Estimation Using Pseudo Reference Depth<br>
+                <small>
+                    Computer Graphics Forum (CGF) 2023
+                </small>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+
+                    <li>
+                        <a href="https://libingzeng.github.io/">
+                          Libing Zeng
+                        </a>
+                        <br>Texas A&amp;M University
+                    </li>
+
+
+                    <li>
+                        <a href="http://faculty.cs.tamu.edu/nimak/">
+                          Nima Khademi Kalantari
+                        </a>
+                        <br>Texas A&amp;M University
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="./depth/depth_cgf.pdf">
+                            <img src="./depth/paper_icon.JPG" height="120px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                            <img src="./depth/github_pad.png" height="120px"><br>
+                                <h4><strong> Code (coming soon) <br></strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+
+            
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <img src="./depth/overview.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    In this paper, we propose a learning-based test-time optimization approach 
+                    for reconstructing geometrically consistent depth maps from a monocular video. 
+                    Specifically, we optimize an existing single image depth estimation network 
+                    on the test example at hand. We do so by introducing pseudo reference depth 
+                    maps which are computed based on the observation that the optical flow displacement 
+                    for an image pair should be consistent with the displacement obtained by depth-reprojection. 
+                    Additionally, we discard inaccurate pseudo reference depth maps using a simple median strategy 
+                    and propose a way to compute a confidence map for the reference depth. 
+                    We use our pseudo reference depth and the confidence map to formulate a loss function 
+                    for performing the test-time optimization in an efficient and effective manner. 
+                    We compare our approach against the state-of-the-art methods on various scenes both visually and numerically. 
+                    Our approach is on average 2.5× faster than the state of the art and produces depth maps with higher quality.
+                </p>
+            </div>
+        </div>
+
+
+
+            
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Results
+                </h3>
+                <img src="./depth/results.jpg" class="img-responsive" alt="results"><br>
+                <p class="text-justify">
+                    Comparisonsagainstseveralstate-of-the-artmethodsoncasuallycaptureddynamicscenes.
+                </p>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Supplementary Video
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;">
+                        <iframe align="center" width="100%" height="422" src="https://youtu.be/v8KaUKTOgm8" frameborder="0" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                <pre>
+                @article{Zeng_2023_depth,
+                    author = {Zeng, Libing and Kalantari, Nima Khademi},
+                    title = {Test-Time Optimization for Video Depth Estimation Using Pseudo Reference Depth},
+                    journal = {Computer Graphics Forum},
+                    doi = {https://doi.org/10.1111/cgf.14729},
+                    url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.14729},
+                }
+                </pre>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                    We thank the reviewers for their insightful comments. 
+                    We also thank Brennen Taylor for capturing the input sequences. 
+                    The website template was borrowed from <a href="http://mgharbi.com/">Michael Gharbi</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body></html>
