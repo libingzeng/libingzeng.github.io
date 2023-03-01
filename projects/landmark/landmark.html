@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://people.engr.tamu.edu/nimak/Papers/SIGAsia2022_LookAhead/index.html -->
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>3D-aware Facial Landmark Detection via Multiview Consistent Training on Synthetic Data</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/jpg" href="depth/depth_icon.jpg"> -->
+  <link rel="shortcut icon" HREF="depth/favicon.ico">
+  <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="./landmark/bootstrap.min.css">
+    <link rel="stylesheet" href="./landmark/font-awesome.min.css">
+    <link rel="stylesheet" href="./landmark/codemirror.min.css">
+    <link rel="stylesheet" href="./landmark/app.css">
+
+    <link rel="stylesheet" href="./landmark/bootstrap.min(1).css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="./landmark/analytics.js"></script><script async="" src="./landmark/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110862391-3');
+    </script>
+
+    <script src="./landmark/jquery.min.js"></script>
+    <script src="./landmark/bootstrap.min.js"></script>
+    <script src="./landmark/codemirror.min.js"></script>
+    <script src="./landmark/clipboard.min.js"></script>
+    
+    <script src="./landmark/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                3D-aware Facial Landmark Detection via Multiview Consistent Training on Synthetic Data<br>
+                <small>
+                    The IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2023)
+                </small>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+
+                    <li>
+                        <a href="https://libingzeng.github.io/">
+                          Libing Zeng
+                        </a>
+                        <br>Texas A&amp;M University
+                    </li>
+
+                    <li>
+                        <a href="https://lelechen63.github.io/">
+                          Lele Chen
+                        </a>
+                        <br>OPPO Research
+                    </li>
+
+                    <li>
+                        <a href="https://cogito2012.github.io/homepage/">
+                          Wentao Bao
+                        </a>
+                        <br>Michigan State University
+                    </li>
+
+                    <li>
+                        <a href="https://sites.google.com/site/lizhong19900216">
+                          Zhong Li
+                        </a>
+                        <br>OPPO Research
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/in/yi-xu-42654823/">
+                          Yi Xu
+                        </a>
+                        <br>OPPO Research
+                    </li>
+
+                    <li>
+                        <a href="https://cse.buffalo.edu/~jsyuan/">
+                          Junsong Yuan
+                        </a>
+                        <br>University at Buffalo
+                    </li>
+
+                    <li>
+                        <a href="http://faculty.cs.tamu.edu/nimak/">
+                          Nima Khademi Kalantari
+                        </a>
+                        <br>Texas A&amp;M University
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="./landmark/landmark_cvpr.pdf">
+                            <img src="./landmark/paper_icon.JPG" height="120px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./landmark/landmark_cvpr_sup.pdf">
+                            <img src="./landmark/paperclip.png" height="120px"><br>
+                                <h4><strong>Supplementary</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/libingzeng/landmark_consistent_plugin">
+                            <img src="./landmark/github_pad.png" height="120px"><br>
+                                <h4><strong> Code <br></strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/libingzeng/eg3d_pti_inv_synthetic_dataset">
+                            <img src="./landmark/github_pad.png" height="120px"><br>
+                                <h4><strong> Code (dataset) <br></strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+
+            
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <img src="./landmark/overview.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    Accurate facial landmark detection on wild images plays essential role 
+                    for human-computer interaction, entertainment, and medical applications. 
+                    Existing approaches are limited by the in-the-wild data and fail 
+                    to enforce 3D consistency when detecting 3D/2D facial landmarks. 
+                    On the other hand, with recent advances in generative visual models and neural rendering, 
+                    we have witnessed rapid progress towards high quality 3D image synthesis. 
+                    In this work, by leveraging synthetic data, 
+                    we propose a novel multi-view consistent learning strategy 
+                    to improve 3D facial landmark detection accuracy on in-the-wild images. 
+                    The proposed 3D-aware module can be plugged into any learning-based landmark detection algorithm. 
+                    We demonstrate the superiority of the proposed plug-in module with extensive comparison against state-of-the-art methods on several real and synthetic datasets.                </p>
+            </div>
+        </div>
+
+
+
+            
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Dataset
+                </h3>
+                <video width="100%" height="422" controls>
+                    <source src="./landmark/landmark_dataset.mp4" type="video/mp4" alt="dataset_video">
+                </video>
+                <p class="text-justify">
+                    We synthesize multiview images with geometrical consistency landmarks using single in-the-wild image and its annotated landmark.
+                </p>
+                <img src="./landmark/landmark_dataset.png" class="img-responsive" alt="dataset_pipeline"><br>
+                <p class="text-justify">
+                    The proposed data simulation pipeline.
+                </p>
+            </div>
+        </div>
+
+
+
+            
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Results
+                </h3>
+                <img src="./landmark/results.png" class="img-responsive" alt="results"><br>
+                <p class="text-justify">
+                    The visual results of Dlib, FAN, 3DDFA, our refined 3DDFA+, 3DDFA-V2, DAD-3DNet, and our refined DAD-3DNet on images randomly sampled from DAD-3DHeads testing set. We show the enlarged error region (while box) in the middle row.
+                </p>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Supplementary Video
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;">
+                        <iframe align="center" width="100%" height="422" src="https://www.youtube.com/embed/v8KaUKTOgm8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                <pre>
+                @article{Zeng_2023_landmark,
+                    author = {Zeng, Libing and Chen, Lele and Bao, Wentao and Li, Zhong and Xu, Yi and Yuan, Junsong and Kalantari, Nima Khademi},
+                    title = {3D-aware Facial Landmark Detection via Multiview Consistent Training on Synthetic Data},
+                    booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+                    year={2023}
+                }
+                </pre>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                    We thank the reviewers for their insightful comments. 
+                    The website template was borrowed from <a href="http://mgharbi.com/">Michael Gharbi</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body></html>
