@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://people.engr.tamu.edu/nimak/Papers/SIGAsia2022_LookAhead/index.html -->
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>MyStyle++: A Controllable Personalized Generative Prior</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/jpg" href="depth/depth_icon.jpg"> -->
+  <link rel="shortcut icon" HREF="mystyle++/favicon.ico">
+  <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="./mystyle++/bootstrap.min.css">
+    <link rel="stylesheet" href="./mystyle++/font-awesome.min.css">
+    <link rel="stylesheet" href="./mystyle++/codemirror.min.css">
+    <link rel="stylesheet" href="./mystyle++/app.css">
+
+    <link rel="stylesheet" href="./mystyle++/bootstrap.min(1).css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="./mystyle++/analytics.js"></script><script async="" src="./mystyle++/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110862391-3');
+    </script>
+
+    <script src="./mystyle++/jquery.min.js"></script>
+    <script src="./mystyle++/bootstrap.min.js"></script>
+    <script src="./mystyle++/codemirror.min.js"></script>
+    <script src="./mystyle++/clipboard.min.js"></script>
+    
+    <script src="./mystyle++/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                MyStyle++: A Controllable Personalized Generative Prior<br>
+                <small>
+                    SIGGRAPH Asia 2023
+                </small>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+
+                    <li>
+                        <a href="https://libingzeng.github.io/">
+                          Libing Zeng
+                        </a>
+                        <br>Texas A&amp;M University
+                    </li>
+
+                    <li>
+                        <a href="https://lelechen63.github.io/">
+                          Lele Chen
+                        </a>
+                        <br>Sony AI
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/in/yi-xu-42654823/">
+                          Yi Xu
+                        </a>
+                        <br>OPPO US Research Center
+                    </li>
+
+                    <li>
+                        <a href="http://faculty.cs.tamu.edu/nimak/">
+                          Nima Khademi Kalantari
+                        </a>
+                        <br>Texas A&amp;M University
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="./mystyle++/siggraph_asia_2023_image_generation_final.pdf">
+                            <img src="./mystyle++/paper_icon.jpg" height="120px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./mystyle++/siggraph_asia_2023_image_generation_supp_final.pdf">
+                            <img src="./mystyle++/paperclip.png" height="120px"><br>
+                                <h4><strong>Supplementary</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/libingzeng/mystyle_pp">
+                            <img src="./mystyle++/github_pad.png" height="120px"><br>
+                                <h4><strong> Code <br></strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+
+            
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <img src="./mystyle++/teaser2.jpg" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    In this paper, we propose an approach to obtain a personalized generative prior with explicit control over a set of attributes. 
+                    We build upon MyStyle, a recently introduced method, that tunes the weights of a pre-trained StyleGAN face generator on a few images of an individual. 
+                    This system allows synthesizing, editing, and enhancing images of the target individual with high fidelity to their facial features. 
+                    However, MyStyle does not demonstrate precise control over the attributes of the generated images. 
+                    We propose to address this problem through a novel optimization system that organizes the latent space in addition to tuning the generator. 
+                    Our key contribution is to formulate a loss that arranges the latent codes, corresponding to the input images, along a set of specific directions according to their attributes. 
+                    We demonstrate that our approach, dubbed MyStyle++, is able to synthesize, edit, and enhance images of an individual with great control over the attributes, while preserving the unique facial characteristics of that individual.            
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Supplementary Video
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;">
+                        <iframe align="center" width="100%" height="422"  src="https://www.youtube.com/embed/ZTHSluz96G4?si=gge_u5cfMffbdAiN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                <pre>
+                @article{Zeng_2023_mystyle++,
+                    author = {Zeng, Libing and Chen, Lele and Xu, Yi and Kalantari, Nima Khademi},
+                    title = {MyStyle++: A Controllable Personalized Generative Prior},
+                    booktitle={ACM SIGGRAPH Asia},
+                    year={2023}
+                }
+                </pre>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                    We express our gratitude to the anonymous reviewers for their insightful comments and suggestions. 
+                    Additionally, we would like to thank <a href="https://ykq98.github.io/">Keqiang Yan</a> and <a href="https://lyq.me/scholar">Yongqing Liang</a> for the valuable discussions.
+                    The website template was borrowed from <a href="http://mgharbi.com/">Michael Gharbi</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body></html>
