@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://people.engr.tamu.edu/nimak/Papers/SIGAsia2022_LookAhead/index.html -->
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Analyzing and Improving the Skin Tone Consistency and Bias in Implicit 3D Relightable Face Generators</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/jpg" href="depth/depth_icon.jpg"> -->
+  <link rel="shortcut icon" HREF="relighting/favicon.ico">
+  <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="./relighting/bootstrap.min.css">
+    <link rel="stylesheet" href="./relighting/font-awesome.min.css">
+    <link rel="stylesheet" href="./relighting/codemirror.min.css">
+    <link rel="stylesheet" href="./relighting/app.css">
+
+    <link rel="stylesheet" href="./relighting/bootstrap.min(1).css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="./relighting/analytics.js"></script><script async="" src="./relighting/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110862391-3');
+    </script>
+
+    <script src="./relighting/jquery.min.js"></script>
+    <script src="./relighting/bootstrap.min.js"></script>
+    <script src="./relighting/codemirror.min.js"></script>
+    <script src="./relighting/clipboard.min.js"></script>
+    
+    <script src="./relighting/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                Analyzing and Improving the Skin Tone Consistency and Bias in Implicit 3D Relightable Face Generators<br>
+                <small>
+                    The IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2025)
+                </small>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+
+                    <li>
+                        <a href="https://libingzeng.github.io/">
+                          Libing Zeng
+                        </a>
+                        <br>Texas A&amp;M University
+                    </li>
+
+                    <li>
+                        <a href="http://faculty.cs.tamu.edu/nimak/">
+                          Nima Khademi Kalantari
+                        </a>
+                        <br>Texas A&amp;M University
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="./relighting/WACV_2025_Face_Relighting_Revision_camera_ready.pdf">
+                            <!-- <a href="https://arxiv.org/pdf/2306.04865.pdf"> -->
+                            <img src="./relighting/paper_icon.png" height="120px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./relighting/WACV_2025_Face_Relighting_Revision_camera_ready_supp.pdf">
+                            <img src="./relighting/paperclip.png" height="120px"><br>
+                                <h4><strong>Supplementary</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                            <img src="./relighting/github_pad.png" height="120px"><br>
+                                <h4><strong> Code (Coming Soon)<br></strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+
+            
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <img src="./relighting/teaser_v9.jpg" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    With the advances in generative adversarial networks (GANs) and neural rendering, 3D relightable face generation has received significant attention. 
+                    Among the existing methods, a particularly successful technique uses an implicit lighting representation and generates relit images through the product of synthesized albedo and light-dependent shading images. 
+                    While this approach produces high-quality results with intricate shading details, it often has difficulty producing relit images with consistent skin tones, particularly when the lighting condition is extracted from images of individuals with dark skin. 
+                    Additionally, this technique is biased towards producing albedo images with lighter skin tones. Our main observation is that this problem is rooted in the biased spherical harmonics (SH) coefficients, used during training. 
+                    Following this observation, we conduct an analysis and demonstrate that the bias appears not only in band 0 (DC term), but also in the other bands of the estimated SH coefficients. We then propose a simple, but effective, strategy to mitigate the problem. 
+                    Specifically, we normalize the SH coefficients by their DC term to eliminate the inherent magnitude bias, while statistically align the coefficients in the other bands to alleviate the directional bias. We also propose a scaling strategy to match the distribution of illumination magnitude in the generated images with the training data.
+                    Through extensive experiments, we demonstrate the effectiveness of our solution in increasing the skin tone consistency and mitigating bias.
+                </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Supplementary Video
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;">
+                        <iframe align="center" width="100%" height="422"  src="https://www.youtube.com/embed/gs3pP7v5afE?si=7V_zADNXy-CjTRvA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                <pre>
+                @article{Zeng_2025_relighting,
+                    author = {Zeng, Libing and Kalantari, Nima Khademi},
+                    title = {Analyzing and Improving the Skin Tone Consistency and Bias in Implicit 3D Relightable Face Generators},
+                    booktitle={The IEEE/CVF Winter Conference on Applications of Computer Vision},
+                    year={2025}
+                }
+                </pre>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                    We express our gratitude to the anonymous reviewers for their insightful comments and suggestions. 
+                    Additionally, portions of this research were conducted with the advanced computing resources provided by Texas A&M High Performance Research Computing.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body></html>
