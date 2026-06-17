@@ -129,6 +129,21 @@
                 </div>
         </div>
 
+            
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Teaser
+                </h3>
+                <img src="./reaging/representative.jpg" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    Given a 3D face model, represented here using 3D Gaussian splatting, our proposed method enables precise age manipulation with
+                    fine-grained detail while maintaining multiview consistency and preserving identity. It exhibits smooth and continuous transitions across age
+                    ranges from 20 to 80 years, effectively capturing age-related changes such as the gradual formation and deepening of wrinkles. Additionally,
+                    the method is robust across a range of facial expressions (e.g. neutral, pucker, and smiles) and generalizes across different identities.
+                </p>
+            </div>
+        </div>
 
             
         <div class="row">
@@ -136,7 +151,6 @@
                 <h3>
                     Abstract
                 </h3>
-                <img src="./reaging/representative.jpg" class="img-responsive" alt="overview"><br>
                 <p class="text-justify">
                     We present a novel framework for realistic and controllable 3D face re-aging which produces highly detailed, identity-preserving
                     results. Existing 3D editing methods, while effective for coarse semantic changes, are not well suited for re-aging, as even small
@@ -155,7 +169,24 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Supplementary Video
+                    Overview
+                </h3>
+                <img src="./reaging/overview_v6.jpg" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    Overview of Our 3D Face Re-Aging Framework. We first train a diffusion-based re-aging model, DiffReaging, on a synthetic dataset.
+                    To extend its re-aging capability to 3D, we introduce a multi-view consistent editing framework. Starting with the pivot view, we re-age it using
+                    DiffReaging and warp the results to other views. The Masked-DiffReaging model, adapted from DiffReaging with additional mask constraints,
+                    is then used to reconstruct occluded regions. Using a center-out re-aging strategy, we progressively re-age surrounding views. Finally, all
+                    re-aged images are used to update the 3D model.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Results
                 </h3>
                 <div class="text-center">
                     <div style="position:relative;">
