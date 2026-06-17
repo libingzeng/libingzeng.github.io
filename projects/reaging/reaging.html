@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://people.engr.tamu.edu/nimak/Papers/SIGAsia2022_LookAhead/index.html -->
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>ReAge3D: Re-Aging 3D Faces with View Consistency</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/jpg" href="depth/depth_icon.jpg"> -->
+  <link rel="shortcut icon" HREF="reaging/favicon.ico">
+  <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="./reaging/bootstrap.min.css">
+    <link rel="stylesheet" href="./reaging/font-awesome.min.css">
+    <link rel="stylesheet" href="./reaging/codemirror.min.css">
+    <link rel="stylesheet" href="./reaging/app.css">
+
+    <link rel="stylesheet" href="./reaging/bootstrap.min(1).css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="./reaging/analytics.js"></script><script async="" src="./reaging/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110862391-3');
+    </script>
+
+    <script src="./reaging/jquery.min.js"></script>
+    <script src="./reaging/bootstrap.min.js"></script>
+    <script src="./reaging/codemirror.min.js"></script>
+    <script src="./reaging/clipboard.min.js"></script>
+    
+    <script src="./reaging/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                ReAge3D: Re-Aging 3D Faces with View Consistency<br>
+                <small>
+                    The 37th Eurographics Symposium on Rendering (EGSR 2026)
+                </small>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+
+                    <li>
+                        <a href="https://libingzeng.github.io/">
+                          Libing Zeng
+                        </a>
+                        <br>Texas A&amp;M University
+                    </li>
+
+                    <li>
+                        <a href="https://limacv.github.io/homepage/">
+                          Li Ma
+                        </a>
+                        <br>Netflix Eyeline Studios
+                    </li>
+
+                    <li>
+                        <a href="https://mingminghe.com/">
+                          Mingming He
+                        </a>
+                        <br>Netflix Eyeline Studios
+                    </li>
+
+
+                    <li>
+                        <a href="https://ningyu1991.github.io/">
+                          Ning Yu
+                        </a>
+                        <br>Netflix Eyeline Studios
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.pauldebevec.com/">
+                          Paul Debevec
+                        </a>
+                        <br>Netflix Eyeline Studios
+                    </li>
+
+                    <li>
+                        <a href="http://faculty.cs.tamu.edu/nimak/">
+                          Nima Khademi Kalantari
+                        </a>
+                        <br>Texas A&amp;M University
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/pdf/2606.18156">
+                            <img src="./reaging/paper_icon.png" height="120px"><br>
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./reaging/EGSR_2026_ReAge3D_sup.pdf">
+                            <img src="./reaging/paperclip.png" height="120px"><br>
+                                <h4><strong>Supplementary</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/libingzeng/unbiased_reaging?tab=readme-ov-file">
+                            <img src="./reaging/github_pad.png" height="120px"><br>
+                                <h4><strong> Code (Coming Soon)<br></strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+
+            
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <img src="./reaging/representative.jpg" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    We present a novel framework for realistic and controllable 3D face re-aging which produces highly detailed, identity-preserving
+                    results. Existing 3D editing methods, while effective for coarse semantic changes, are not well suited for re-aging, as even small
+                    inconsistencies across re-aged 2D views can lead to over-smoothing of subtle but perceptually important age-related details. To
+                    address this challenge, we first introduce a 2D diffusion-based re-aging model, DiffReaging, trained on synthetically generated
+                    image pairs. We further propose a center-out editing propagation strategy that leverages this re-aging model to reconstruct
+                    multi-view-consistent re-aged images. Specifically, starting from a re-aged frontal pivot view, we reconstruct the remaining views
+                    through warping and our proposed Masked-DiffReaging process. By injecting existing content at every step of the diffusion
+                    process, Masked-DiffReaging ensures that the reconstructed regions remain coherent with existing pixels. The resulting consistent
+                    set of re-aged views supervises the optimization of the re-aged 3D representation. Our method outperforms existing 3D editing
+                    techniques both visually and quantitatively, enabling smooth, fine-grained control over age transformations in 3D face models.                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Supplementary Video
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;">
+                        <iframe align="center" width="100%" height="422"  src="https://www.youtube.com/embed/by-IKmWcmrI?si=SsLNpppPCdc2mH-D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                <pre>
+                @article{Zeng_2026_reaging,
+                    author = {Zeng, Libing and Ma, Li and He, Mingming and Yu, Ning and Debevec, Paul and Kalantari, Nima Khademi},
+                    title = {ReAge3D: Re-Aging 3D Faces with View Consistency},
+                    booktitle={The 37th Eurographics Symposium on Rendering},
+                    year={2026}
+                }
+                </pre>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                    We express our gratitude to the anonymous reviewers for their insightful comments and suggestions. 
+                    Additionally, portions of this research were conducted with the advanced computing resources provided by Texas A&M High Performance Research Computing.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body></html>
